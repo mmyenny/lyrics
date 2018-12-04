@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import axios from 'axios'
 
 class App extends Component {
   constructor(props) {
@@ -7,7 +8,12 @@ class App extends Component {
 
     this.state = {
       artist: '',
-      songName: ''
+      songName: '',
+
+      resultArist: '',
+      resultSong: '',
+
+      result: ''
     }
   }
 
@@ -25,18 +31,44 @@ class App extends Component {
 
   getSongLyrics = event => {
     event.preventDefault()
-    console.log(this.state.songName)
-    console.log(this.state.artist)
+
+    axios
+      .get(
+        `https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.songName}`
+      )
+      .then(response => {
+        console.log(response.data)
+        this.setState({
+          result: response.data.lyrics,
+          resultArtist: this.state.artist,
+          resultSong: this.state.songName,
+          artist: '',
+          songName: ''
+        })
+      })
+  }
+
+  details = () => {
+    if (this.state.result) {
+      return (
+        <>
+          <h2>{this.state.resultArtist}</h2>
+          <h2>{this.state.resultSong}</h2>
+          <p>{this.state.result}</p>
+        </>
+      )
+    }
   }
 
   render() {
     return (
       <div className="App">
-        <h1>Lyrics</h1>
+        <h1>Search for Lyrics</h1>
         <form onSubmit={this.getSongLyrics}>
           <input
             type="text"
             placeholder="Artist"
+            value={this.state.artist}
             onChange={this.changeArtistName}
           />
         </form>
@@ -44,9 +76,11 @@ class App extends Component {
           <input
             type="text"
             placeholder="Title of Song"
+            value={this.state.songName}
             onChange={this.changeSongName}
           />
         </form>
+        {this.details()}
       </div>
     )
   }
