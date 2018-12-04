@@ -1,0 +1,13 @@
+h1 {
+  margin: 15px;
+}
+
+.searchInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+form {
+  padding: 10px;
+}

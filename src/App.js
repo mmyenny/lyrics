@@ -51,11 +51,11 @@ class App extends Component {
   details = () => {
     if (this.state.result) {
       return (
-        <>
+        <div>
           <h2>{this.state.resultArtist}</h2>
           <h2>{this.state.resultSong}</h2>
           <p>{this.state.result}</p>
-        </>
+        </div>
       )
     }
   }
@@ -64,22 +64,24 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Search for Lyrics</h1>
-        <form onSubmit={this.getSongLyrics}>
-          <input
-            type="text"
-            placeholder="Artist"
-            value={this.state.artist}
-            onChange={this.changeArtistName}
-          />
-        </form>
-        <form onSubmit={this.getSongLyrics}>
-          <input
-            type="text"
-            placeholder="Title of Song"
-            value={this.state.songName}
-            onChange={this.changeSongName}
-          />
-        </form>
+        <div className="searchInput">
+          <form onSubmit={this.getSongLyrics}>
+            <input
+              type="text"
+              placeholder="Artist"
+              value={this.state.artist}
+              onChange={this.changeArtistName}
+            />
+          </form>
+          <form onSubmit={this.getSongLyrics}>
+            <input
+              type="text"
+              placeholder="Title of Song"
+              value={this.state.songName}
+              onChange={this.changeSongName}
+            />
+          </form>
+        </div>
         {this.details()}
       </div>
     )
