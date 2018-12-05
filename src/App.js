@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import monkey from './images/monkey.jpeg'
 import axios from 'axios'
 
 class App extends Component {
@@ -85,7 +86,7 @@ class App extends Component {
         </div>
         <div className="details">{this.details()}</div>
         <div className="image">
-          <img src="/static/media/monkey.d1f5f873.jpeg" />
+          <img src={monkey} alt="monkey" />
         </div>
       </div>
     )
