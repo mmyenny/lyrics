@@ -84,7 +84,9 @@ class App extends Component {
           </form>
         </div>
         <div className="details">{this.details()}</div>
-        <div className="image" />
+        <div className="image">
+          <img src="/static/media/monkey.d1f5f873.jpeg" />
+        </div>
       </div>
     )
   }

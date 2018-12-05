@@ -38,31 +38,22 @@ p {
 }
 
 .image {
-  background-image: url(./images/monkey.jpeg);
-  height: 35vh;
-
-  width: 35vw;
+  position: fixed;
+  bottom: 0;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
-/* @media (max-width: 321px) {
-  .details {
-    min-height: 48vh;
-    min-width: 48vw;
-  }
+.image img {
+  width: 16rem;
+  z-index: -1;
+}
+@media (max-width: 700px) {
   .image {
-    height: 80vh;
-    width: 80vw;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    height: 10rem;
   }
 }
-@media (max-width: 769px) {
-  .details {
-    min-height: 48vh;
-    min-width: 48vw;
-  }
-  .image {
-    height: 80vh;
-    width: 80vw;
-  }
-} */
