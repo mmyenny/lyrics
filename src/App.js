@@ -52,8 +52,9 @@ class App extends Component {
     if (this.state.result) {
       return (
         <div>
-          <h2>{this.state.resultArtist}</h2>
-          <h2>{this.state.resultSong}</h2>
+          <h2>
+            {this.state.resultArtist} - {this.state.resultSong}
+          </h2>
           <p>{this.state.result}</p>
         </div>
       )
@@ -82,7 +83,8 @@ class App extends Component {
             />
           </form>
         </div>
-        {this.details()}
+        <div className="details">{this.details()}</div>
+        <div className="image" />
       </div>
     )
   }

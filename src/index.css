@@ -1,7 +1,18 @@
-h1 {
-  margin: 15px;
+html {
+  color: white;
+  background-color: #1f1f1f;
 }
 
+h1 {
+  margin: 15px;
+  color: white;
+  text-shadow: 1.5px 1.5px 0.5px #01f3c9;
+}
+h2 {
+  text-transform: capitalize;
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px #01f3c9;
+}
 .searchInput {
   display: flex;
   justify-content: center;
@@ -11,3 +22,47 @@ h1 {
 form {
   padding: 10px;
 }
+
+input {
+  outline-color: #01f3c9;
+}
+
+.details {
+  min-height: 48vh;
+  min-width: 48vw;
+  margin-bottom: 30px;
+}
+
+p {
+  margin: 0 30px 0 30px;
+}
+
+.image {
+  background-image: url(./images/monkey.jpeg);
+  height: 35vh;
+
+  width: 35vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* @media (max-width: 321px) {
+  .details {
+    min-height: 48vh;
+    min-width: 48vw;
+  }
+  .image {
+    height: 80vh;
+    width: 80vw;
+  }
+}
+@media (max-width: 769px) {
+  .details {
+    min-height: 48vh;
+    min-width: 48vw;
+  }
+  .image {
+    height: 80vh;
+    width: 80vw;
+  }
+} */
