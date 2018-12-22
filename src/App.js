@@ -88,6 +88,48 @@ class App extends Component {
         <div className="image">
           <img src={monkey} alt="monkey" />
         </div>
+        <div className="smoke">
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+          <div className="particle" />
+        </div>
       </div>
     )
   }
