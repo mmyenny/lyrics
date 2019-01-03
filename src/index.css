@@ -6,7 +6,7 @@ html {
 h1 {
   margin: 15px;
   color: white;
-  text-shadow: 1.5px 1.5px 0.5px #01f3c9;
+  text-shadow: 1px 1px 0.5px #01f3c9;
 }
 h2 {
   text-transform: capitalize;
