@@ -10,6 +10,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200;
 }
+
 h2 {
   text-transform: capitalize;
   color: white;
@@ -18,11 +19,6 @@ h2 {
   font-size: 22px;
   font-weight: 100;
 }
-.searchInput {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
 
 form {
   padding: 10px;
@@ -30,6 +26,7 @@ form {
 
 input {
   outline-color: #01f3c9;
+  margin-right: 10px;
 }
 
 .details {
@@ -54,6 +51,7 @@ p {
   width: 16rem;
   z-index: -1;
 }
+
 @media (max-width: 700px) {
   .image {
     position: relative;
@@ -64,7 +62,7 @@ p {
 }
 
 @media (min-width: 550px) {
-  /* /* start of smoke */
+  /* /* start of CSS animation*/
   :root {
     --wind: 100;
     --blur: 2;

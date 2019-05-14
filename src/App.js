@@ -31,14 +31,15 @@ class App extends Component {
   }
 
   getSongLyrics = event => {
+    //prevents page reload
     event.preventDefault()
-
+    //make http request
     axios
       .get(
         `https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.songName}`
       )
       .then(response => {
-        console.log(response.data)
+        //sets state to results
         this.setState({
           result: response.data.lyrics,
           resultArtist: this.state.artist,
@@ -50,6 +51,7 @@ class App extends Component {
   }
 
   details = () => {
+    // if state is true, display lyrics
     if (this.state.result) {
       return (
         <div>
@@ -66,28 +68,26 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Search for Lyrics</h1>
-        <div className="searchInput">
-          <form onSubmit={this.getSongLyrics}>
-            <input
-              type="text"
-              placeholder="Artist"
-              value={this.state.artist}
-              onChange={this.changeArtistName}
-            />
-          </form>
-          <form onSubmit={this.getSongLyrics}>
-            <input
-              type="text"
-              placeholder="Title of Song"
-              value={this.state.songName}
-              onChange={this.changeSongName}
-            />
-          </form>
-        </div>
+        <form onSubmit={this.getSongLyrics}>
+          <input
+            type="text"
+            placeholder="Artist"
+            value={this.state.artist}
+            onChange={this.changeArtistName}
+          />
+          <input
+            type="text"
+            placeholder="Title of Song"
+            value={this.state.songName}
+            onChange={this.changeSongName}
+          />
+          <button type="submit">Submit</button>
+        </form>
         <div className="details">{this.details()}</div>
         <div className="image">
           <img src={monkey} alt="monkey" />
         </div>
+
         <div className="smoke">
           <div className="particle" />
           <div className="particle" />
