@@ -29,6 +29,14 @@ input {
   margin-right: 10px;
 }
 
+button {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
 .details {
   min-height: 48vh;
   min-width: 48vw;
